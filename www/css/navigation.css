@@ -1,0 +1,307 @@
+section.navigation {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  z-index: 1;
+}
+section.navigation h1 {
+  background: linear-gradient(45deg, #ed6942, #d64a7f);
+  color: #fff;
+}
+section.navigation div {
+  overflow: auto;
+}
+section.navigation div a {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+section.navigation div a:link,
+section.navigation div a:visited,
+section.navigation div a:hover,
+section.navigation div a:visited:hover,
+section.navigation div a:focus {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+section.navigation span {
+  width: 70px;
+  height: 70px;
+}
+section.navigation span.inactive::before,
+section.navigation span.inactive::after {
+  content: "";
+  width: 32px;
+  height: 2px;
+  position: absolute;
+  left: 19px;
+  right: 19px;
+  background: #c5cbd0;
+  transform-orgin: center center;
+  will-change: transform;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+section.navigation span.inactive::before {
+  top: 28px;
+}
+section.navigation span.inactive::after {
+  bottom: 28px;
+}
+section.navigation span.inactive:hover {
+  cursor: pointer;
+}
+section.navigation span.inactive:hover::before,
+section.navigation span.inactive:hover::after {
+  cursor: pointer;
+  background: #282d32;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+section.navigation span.active::before,
+section.navigation span.active::after {
+  content: "";
+  width: 32px;
+  height: 2px;
+  position: absolute;
+  left: 19px;
+  right: 19px;
+  background: #c5cbd0;
+  transform-orgin: center center;
+  will-change: transform;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+section.navigation span.active::before {
+  top: 34px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+section.navigation span.active::after {
+  bottom: 34px;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+section.navigation span.active:hover {
+  cursor: pointer;
+}
+section.navigation span.active:hover::before,
+section.navigation span.active:hover::after {
+  cursor: pointer;
+  background: #282d32;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+@media only screen and (max-width: 419px) {
+  section.navigation h1 {
+    padding: 25px;
+    font: 300 20px/1 "Roboto Slab", serif;
+  }
+  section.navigation div.inactive {
+    display: none;
+  }
+  section.navigation div.active {
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #3c4b5a;
+  }
+  section.navigation div.active a {
+    padding: 28px;
+    font: 500 22px/1 "Rajdhani", monospace;
+  }
+  section.navigation div.active a:link,
+  section.navigation div.active a:visited {
+    color: #c5cbd0;
+  }
+  section.navigation div.active a:hover,
+  section.navigation div.active a:visited:hover,
+  section.navigation div.active a:focus {
+    color: #fff;
+  }
+  section.navigation span {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 420px) and (max-width: 839px) {
+  section.navigation h1 {
+    padding: 23px;
+    font: 300 24px/1 "Roboto Slab", serif;
+  }
+  section.navigation div.inactive {
+    display: none;
+  }
+  section.navigation div.active {
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #3c4b5a;
+  }
+  section.navigation div.active a {
+    padding: 27px;
+    font: 500 20px/1 "Rajdhani", monospace;
+  }
+  section.navigation div.active a:link,
+  section.navigation div.active a:visited {
+    color: #c5cbd0;
+  }
+  section.navigation div.active a:hover,
+  section.navigation div.active a:visited:hover,
+  section.navigation div.active a:focus {
+    color: #fff;
+  }
+  section.navigation span {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 840px) and (max-width: 1259px) {
+  section.navigation h1 {
+    padding: 21px;
+    font: 300 28px/1 "Roboto Slab", serif;
+  }
+  section.navigation div.inactive,
+  section.navigation div.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+  }
+  section.navigation div.inactive a,
+  section.navigation div.active a {
+    padding: 26px;
+    border-left: 1px solid #eee;
+    font: 500 18px/1 "Rajdhani", monospace;
+  }
+  section.navigation div.inactive a:link,
+  section.navigation div.active a:link,
+  section.navigation div.inactive a:visited,
+  section.navigation div.active a:visited {
+    color: #c5cbd0;
+  }
+  section.navigation div.inactive a:hover,
+  section.navigation div.active a:hover,
+  section.navigation div.inactive a:visited:hover,
+  section.navigation div.active a:visited:hover,
+  section.navigation div.inactive a:focus,
+  section.navigation div.active a:focus {
+    color: #282d32;
+  }
+  section.navigation span {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1260px) and (max-width: 1679px) {
+  section.navigation h1 {
+    padding: 19px;
+    font: 300 32px/1 "Roboto Slab", serif;
+  }
+  section.navigation div.inactive,
+  section.navigation div.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+  }
+  section.navigation div.inactive a,
+  section.navigation div.active a {
+    padding: 25px;
+    border-left: 1px solid #eee;
+    font: 500 20px/1 "Rajdhani", monospace;
+  }
+  section.navigation div.inactive a:link,
+  section.navigation div.active a:link,
+  section.navigation div.inactive a:visited,
+  section.navigation div.active a:visited {
+    color: #c5cbd0;
+  }
+  section.navigation div.inactive a:hover,
+  section.navigation div.active a:hover,
+  section.navigation div.inactive a:visited:hover,
+  section.navigation div.active a:visited:hover,
+  section.navigation div.inactive a:focus,
+  section.navigation div.active a:focus {
+    color: #282d32;
+  }
+  section.navigation span {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1680px) {
+  section.navigation h1 {
+    padding: 17px;
+    font: 300 36px/1 "Roboto Slab", serif;
+  }
+  section.navigation div.inactive,
+  section.navigation div.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+  }
+  section.navigation div.inactive a,
+  section.navigation div.active a {
+    padding: 24px;
+    border-left: 1px solid #eee;
+    font: 500 22px/1 "Rajdhani", monospace;
+  }
+  section.navigation div.inactive a:link,
+  section.navigation div.active a:link,
+  section.navigation div.inactive a:visited,
+  section.navigation div.active a:visited {
+    color: #c5cbd0;
+  }
+  section.navigation div.inactive a:hover,
+  section.navigation div.active a:hover,
+  section.navigation div.inactive a:visited:hover,
+  section.navigation div.active a:visited:hover,
+  section.navigation div.inactive a:focus,
+  section.navigation div.active a:focus {
+    color: #282d32;
+  }
+  section.navigation span {
+    display: none;
+  }
+}

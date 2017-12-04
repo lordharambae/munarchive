@@ -1,0 +1,51 @@
+@import global
+
+section.upload
+	width 100%
+	height calc(100% - 70px)
+	top 70px
+	display flex
+	align-items center
+	justify-content center
+	overflow auto
+	
+	form 
+		display flex 
+		flex-flow column
+		
+		input 
+			color $oxford-blue
+			text-align center
+			letter-spacing 1px
+			border 0
+			outline 0
+			background $mystic
+			
+			&[type="file"]
+				padding 0
+				margin 0
+				background transparent
+				
+				&::-webkit-file-upload-button
+					width 100%
+					color $oxford-blue
+					text-align center
+					letter-spacing 1px
+					border 0
+					outline 0
+					background $mystic
+				
+			&::placeholder
+				font 300 18px/1 $open-sans
+			
+		button
+			display inline-block
+			color white
+			text-transform uppercase
+			letter-spacing 3px
+			border 0
+			outline 0
+			background $oxford-blue
+			
+			&:hover
+				cursor pointer

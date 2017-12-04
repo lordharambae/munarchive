@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /styl/
+Disallow: /ts/
+Disallow: /pdf/
+Disallow: /php/
